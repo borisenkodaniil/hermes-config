@@ -1,0 +1,16 @@
+# секреты и рантайм — никогда
+.env
+*.env*
+auth.json
+**/google_service_account.json
+**/google_token.json
+**/credentials/
+**/*.db
+**/*.db-*
+**/sessions/
+**/logs/
+**/cache/
+**/__pycache__/
+*.sock
+*.pid
+*.lock

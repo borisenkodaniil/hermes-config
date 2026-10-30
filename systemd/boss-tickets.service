@@ -1,0 +1,18 @@
+[Unit]
+Description=Boss Tickets — карточки заявок с кнопками (отдельный Telegram-бот)
+After=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Environment=PYTHONUNBUFFERED=1
+Environment=HERMES_HOME=/root/.hermes
+WorkingDirectory=/root/.hermes/scripts
+ExecStart=/usr/bin/python3 /root/.hermes/scripts/bossd.py
+Restart=always
+RestartSec=5
+StandardOutput=append:/root/.hermes/logs/boss-tickets.log
+StandardError=append:/root/.hermes/logs/boss-tickets.log
+
+[Install]
+WantedBy=default.target
